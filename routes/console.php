@@ -3,4 +3,4 @@
 use App\Console\Commands\FetchFeeds;
 use Illuminate\Support\Facades\Schedule;
 
-Schedule::command(FetchFeeds::class)->hourly();
+Schedule::command(FetchFeeds::class)->everyThirtyMinutes();
