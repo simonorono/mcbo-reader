@@ -17,6 +17,6 @@ class FeedItem extends Model
     ];
 
     protected $casts = [
-        'pubDate' => 'timestamp',
+        'pubDate' => 'datetime',
     ];
 }
