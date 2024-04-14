@@ -38,7 +38,7 @@ class FeedController extends Controller
      */
     public function show(Feed $feed)
     {
-        //
+        return view('feeds.show', compact('feed'));
     }
 
     /**
