@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FeedItem;
 use Illuminate\Http\Request;
 
 class Index extends Controller
@@ -11,6 +12,8 @@ class Index extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('index');
+        $items = FeedItem::orderByDesc('pubDate')->get();
+
+        return view('index', compact('items'));
     }
 }
