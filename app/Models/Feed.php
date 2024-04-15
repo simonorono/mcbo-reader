@@ -16,4 +16,9 @@ class Feed extends Model
     {
         return $this->hasMany(FeedItem::class);
     }
+
+    public function fetchRecords(): HasMany
+    {
+        return $this->hasMany(FeedFetchRecord::class);
+    }
 }

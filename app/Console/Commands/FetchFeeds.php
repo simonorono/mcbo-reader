@@ -83,6 +83,9 @@ class FetchFeeds extends Command
     protected function fetchFeed(Feed $feed): void
     {
         $content = file_get_contents($feed->url);
+
+        $feed->fetchRecords()->create(['rss' => $content]);
+
         $xml = simplexml_load_string($content, 'SimpleXMLElement', LIBXML_NOCDATA);
 
         foreach ($xml->channel->item as $item) {
