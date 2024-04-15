@@ -6,4 +6,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Index::class);
 
-Route::resource('feeds', FeedController::class);
+Route::resource('feeds', FeedController::class)->only('index', 'show');
