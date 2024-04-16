@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    {!! $item->content !!}
+    <article class="prose mx-auto">
+        {!! $item->content !!}
+    </article>
 @endsection
