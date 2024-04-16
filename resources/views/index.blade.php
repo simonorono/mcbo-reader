@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <ul>
+    <ul class="list-disc">
         @foreach($items as $item)
             <li>
                 <a href="{{ route('show-feed-item', $item) }}" target="_blank">
