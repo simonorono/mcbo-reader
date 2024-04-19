@@ -9,7 +9,13 @@
 
 <body>
 <div class="container mx-auto">
-    @yield('content')
+    <header>
+        <h1 class="text-2xl py-5 px-2">McboReader</h1>
+        <hr>
+    </header>
+    <main>
+        @yield('content')
+    </main>
 </div>
 </body>
 </html>
